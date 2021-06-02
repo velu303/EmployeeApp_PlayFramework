@@ -4,7 +4,7 @@ Employee App using playframework
 - Datatable for search and filter
 
 - Below links will be used to install the sbt
-  https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Windows.html
+  - https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Windows.html
 
 - sbt clean
 - sbt compile
