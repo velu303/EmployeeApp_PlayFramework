@@ -2,6 +2,7 @@ Employee App using playframework
 
 - Crud operation
 - Datatable for search and filter
+- username : test@gmail.com and password: test (sample data will be loaded while application startup)
 
 - Below links will be used to install the sbt
   - https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Windows.html
