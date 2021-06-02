@@ -14,6 +14,6 @@ Use Intellij for import:
 
   - import the project before you have to install scala plugin 
   - File -> Settings -> plugins -> where you can search scala and then install 
-  - Open project -> it will ask you select the Sbt to download the dependencies
-  - 
+  - Open project -> it will ask you select the Sbt as project to download the dependencies automatically.
+  
 
