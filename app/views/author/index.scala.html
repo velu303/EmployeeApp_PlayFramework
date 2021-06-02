@@ -1,0 +1,28 @@
+@(authors : List[User])
+@import helper._
+
+@layout("Profile"){
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+<!--                <th>Actions</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            @for(author <- authors){
+
+                <tr>
+                    <td>@author.name</td>
+                    <td>@author.email</td>
+                    <td>@author.address.streetAddress, @author.address.city, @author.address.country </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}

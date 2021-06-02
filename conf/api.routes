@@ -1,0 +1,7 @@
+
+# Employee routes
+
+GET     /v1/employees           controllers.API.EmployeeAPIController.index()
+POST    /v1/employee            controllers.API.EmployeeAPIController.save()
+PUT     /v1/employee/:id        controllers.API.EmployeeAPIController.update(id:Integer)
+DELETE  /v1/employee/:id        controllers.API.EmployeeAPIController.destroy(id:Integer)

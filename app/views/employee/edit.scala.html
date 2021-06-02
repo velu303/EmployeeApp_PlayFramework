@@ -1,0 +1,17 @@
+@(employeeForm : Form[Employee])
+@import helper._
+
+
+@layout("Edit Employee"){
+    <h1>Edit Employee</h1>
+
+
+    @helper.form(action = routes.EmployeeController.update(employeeForm.get.id)){
+
+@CSRF.formField
+    @helper.inputText(employeeForm("employeeName"),'class -> "form-control",'required -> "required")
+    @helper.inputText(employeeForm("employeeRole"),'class -> "form-control",'required -> "required")
+
+        <button class="btn btn-success" type="submit">Edit Employee</button>
+    }
+}

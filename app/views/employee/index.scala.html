@@ -1,0 +1,42 @@
+@import controllers.Auth.Secured
+@(employees : List[Employee],title:String)
+@import helper._
+
+@layout(title){
+
+    <h2>@title</h2>
+    <table id="empdata" class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Employee Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @for(employee <- employees){
+            <tr>
+                <td>@employee.id</td>
+
+                <td>@employee.employeeName</td>
+                <td>@employee.employeeRole</td>
+                @if(Secured.CHECK()){
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="@routes.EmployeeController.edit(employee.id)">Edit</a>
+
+                        <button class="btn btn-danger btn-sm" onclick="sendDeleteRequest(
+                            '@routes.EmployeeController.destroy(employee.id)',
+                            '@routes.EmployeeController.index()',
+                            '@CSRF.getToken.value'
+                        )">Delete</button>
+
+                    </td>
+                }
+
+            </tr>
+        }
+
+        </tbody>
+    </table>
+}
